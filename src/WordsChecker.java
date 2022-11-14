@@ -7,20 +7,28 @@ public class WordsChecker {
     Set<String> set = new HashSet<>();
 
     public WordsChecker(String text) {
-        this.text = text;
+        this.text = text.toLowerCase();
     }
-public void splitText(String text) {
+public void splitText() {
         String[] word = text.split(" ");
-        if () {
-            set.add()
-        }
+    for (int i = 0; i < word.length; i++) {
+        if (word[i].charAt(word[i].length() - 1) == '.')  {
+            String[] s = word[i].split("\\.");
+            word[i] = s[0];
+        } else if (word[i].charAt(word[i].length() - 1) == ',') {
+            String[] s = word[i].split(",");
+            word[i] = s[0];
+        } else set.add(word[i]);
+        System.out.println(word[i]);
+    }
+
 }
 
-    public boolean hasWord(String word) {
-        for ( : ) {
-            text.contains(word);
-        }
-        return true;
-    }
+//    public boolean hasWord(String word) {
+//        for ( : ) {
+//            text.contains(word);
+//        }
+//        return true;
+//    }
 
 }

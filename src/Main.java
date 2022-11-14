@@ -11,14 +11,13 @@ public class Main {
             " Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." +
             " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-    public static void containsKey(Map<Character, Integer> hashMap, char ch) {
-        int value = hashMap.get(ch);
-        value++;
-        hashMap.put(ch, value);
-    }
-
     public static void main(String[] args) {
-        Map<Character, Integer> hashMap = new HashMap<>();
+        WordsChecker wordsChecker = new WordsChecker(text);
+        wordsChecker.splitText();
+
+
+
+        /*
         Iterator<Integer> iterator = text.toLowerCase().chars().iterator();
         while (iterator.hasNext()) {
             int i = iterator.next();
@@ -37,5 +36,7 @@ public class Main {
         System.out.println();
         System.out.println("To check yourself let's take a look at the list:");
         hashMap1.stream().forEach(System.out::println);
+        */
+
     }
 }
